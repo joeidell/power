@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -62,7 +61,7 @@
 <body>
     <header>
         <h1>Power Plants Comparison</h1>
-        <h2>Visualizing output and fuel source</h2>
+        <h2>Output and Fuel Type</h2>
     </header>
 
     <div id="map"></div>
@@ -96,7 +95,7 @@
               return L.circleMarker(latlng, {
                  color: 'yellow',
                  weight: 3,
-                 fillColor: 'purple',
+                 fillColor: 'blue',
                  fillOpacity: .4,
                  radius: getRadius(feature.properties.capacity_mw) 
               });   
@@ -142,7 +141,7 @@ layer.on('mouseout', function() {
           pointToLayer: function(feature,latlng) {
               console.log(feature.properties.fuel_source)
               return L.circleMarker(latlng, {
-                 color: 'orange',
+                 color: 'brown',
                  weight: 2,
                  fillColor: 'blue',
                  fillOpacity: .5,
@@ -191,7 +190,7 @@ layer.on('mouseout', function() {
               return L.circleMarker(latlng, {
                  color: 'green',
                  weight: 2,
-                 fillColor: 'yellow',
+                 fillColor: 'orange',
                  fillOpacity: .5,
                  radius: getRadius(feature.properties.capacity_mw)*5 
               });
@@ -213,7 +212,7 @@ filter : function(feature, layer){
 });
 layer.on('mouseout', function() {
     layer.setStyle({
-        fillColor: 'yellow'
+        fillColor: 'orange'
     });
 });          
   
